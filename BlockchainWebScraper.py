@@ -64,7 +64,6 @@ def blockchain_scraper():
             test = WebDriverWait(driver, 300).until(
                 EC.presence_of_all_elements_located((By.XPATH, coinbase))
             ) ##check if current page is coinbase
-            time.sleep(0.5)
             for item in test:
                 if item.text.strip() == 'Yes':
                     current_path = create_path(visited, hash_id)
